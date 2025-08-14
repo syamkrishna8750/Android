@@ -1,116 +1,192 @@
-public class MainActivity extends AppCompatActivity {
-
-    Button button, button2, button3, button4, button5, button6, button7, button8, button9, button10;
-    Button button11, button12, button13, button14, button15, button16;
-    EditText result;
-    float mValueOne, mValueTwo;
-    boolean add, sub, mul, div;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        result = findViewById(R.id.edit);
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
 
-        button = findViewById(R.id.button);
-        button2 = findViewById(R.id.button2);
-        button3 = findViewById(R.id.button3);
-        button4 = findViewById(R.id.button4);
-        button5 = findViewById(R.id.button5);
-        button6 = findViewById(R.id.button6);
-        button7 = findViewById(R.id.button7);
-        button8 = findViewById(R.id.button8);
-        button9 = findViewById(R.id.button9);
-        button10 = findViewById(R.id.button10);
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:ems="10"
+        android:hint="Enter"
 
-        button11 = findViewById(R.id.button11);
-        button12 = findViewById(R.id.button12);
-        button13 = findViewById(R.id.button13);
-        button14 = findViewById(R.id.button14);
-        button15 = findViewById(R.id.button15);
-        button16 = findViewById(R.id.button16);
+        android:inputType="text"
+        android:text=""
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_below="@+id/edit"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:layout_below="@+id/edit"
+        android:layout_toEndOf="@+id/button"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:layout_below="@+id/edit"
+        android:layout_toEndOf="@+id/button2"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:layout_below="@+id/button"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="284dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:layout_below="@+id/button2"
+        android:layout_toEndOf="@+id/button4"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:layout_below="@+id/button2"
+        android:layout_toEndOf="@+id/button5"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="281dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button4"
+        android:text="7"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="357dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:layout_below="@+id/button5"
+        android:layout_toEndOf="@+id/button4"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:layout_below="@+id/button6"
+        android:layout_toEndOf="@+id/button8"
+        tools:layout_editor_absoluteX="277dp"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_below="@+id/edit"
+        android:layout_toEndOf="@+id/button3"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="444dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:layout_below="@+id/button10"
+        android:layout_toEndOf="@+id/button6"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="440dp" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:layout_below="@+id/button11"
+        android:layout_toEndOf="@+id/button9"
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="440dp" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:layout_below="@+id/button7"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="528dp" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:layout_below="@+id/button8"
+        android:layout_toEndOf="@+id/button4"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="528dp" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:layout_below="@+id/button9"
+        android:layout_toEndOf="@+id/button14"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="528dp" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:layout_below="@+id/button9"
+        android:layout_toEndOf="@+id/button15"
+        tools:layout_editor_absoluteX="319dp"
+        tools:layout_editor_absoluteY="530dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="202dp"
+        android:layout_height="40dp"
+        android:text="calculator"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 
-        View.OnClickListener numberListener = v -> {
-            Button b = (Button) v;
-            result.append(b.getText());
-        };
-
-        button.setOnClickListener(numberListener);
-        button2.setOnClickListener(numberListener);
-        button3.setOnClickListener(numberListener);
-        button4.setOnClickListener(numberListener);
-        button5.setOnClickListener(numberListener);
-        button6.setOnClickListener(numberListener);
-        button7.setOnClickListener(numberListener);
-        button8.setOnClickListener(numberListener);
-        button9.setOnClickListener(numberListener);
-        button10.setOnClickListener(numberListener);
-
-
-        button13.setOnClickListener(v -> {
-            if (!result.getText().toString().isEmpty()) {
-                mValueOne = Float.parseFloat(result.getText().toString());
-                add = true;
-                result.setText("");
-            }
-        });
-
-
-        button14.setOnClickListener(v -> {
-            if (!result.getText().toString().isEmpty()) {
-                mValueOne = Float.parseFloat(result.getText().toString());
-                sub = true;
-                result.setText("");
-            }
-        });
-
-
-        button15.setOnClickListener(v -> {
-            if (!result.getText().toString().isEmpty()) {
-                mValueOne = Float.parseFloat(result.getText().toString());
-                mul = true;
-                result.setText("");
-            }
-        });
-
-
-        button16.setOnClickListener(v -> {
-            if (!result.getText().toString().isEmpty()) {
-                mValueOne = Float.parseFloat(result.getText().toString());
-                div = true;
-                result.setText("");
-            }
-        });
-
-
-        button11.setOnClickListener(v -> result.setText(""));
-
-
-        button12.setOnClickListener(v -> {
-            if (!result.getText().toString().isEmpty()) {
-                mValueTwo = Float.parseFloat(result.getText().toString());
-
-                if (add) {
-                    result.setText(String.valueOf(mValueOne + mValueTwo));
-                    add = false;
-                } else if (sub) {
-                    result.setText(String.valueOf(mValueOne - mValueTwo));
-                    sub = false;
-                } else if (mul) {
-                    result.setText(String.valueOf(mValueOne * mValueTwo));
-                    mul = false;
-                } else if (div) {
-                    if (mValueTwo == 0) {
-                        result.setText("Error");
-                    } else {
-                        result.setText(String.valueOf(mValueOne / mValueTwo));
-                    }
-                    div = false;
-                }
-            }
-        });
-    }
-}
+</RelativeLayout>
